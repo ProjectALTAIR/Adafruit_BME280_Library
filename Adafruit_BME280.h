@@ -30,7 +30,11 @@
     I2C ADDRESS/BITS
     -----------------------------------------------------------------------*/
     #define BME280_ADDRESS                (0x77)
-    #define ALTBME280_ADDRESS             (0x76)
+    #define ALTBME280_ADDRESS             (0x76)   // if jumper from SDO to GND is added
+
+// 0x70 is the default TC9548A address.  Addresses 0x71 to 0x77 could also be set, by connecting pins A0 to A2 to Vin,
+// however we will only consider 1 TCA9548A with its default address here.  [Fork from this if you want more functionality!]
+    #define TCA9548A_ADDRESS              (0x70)   
 /*=========================================================================*/
 
 /*=========================================================================
