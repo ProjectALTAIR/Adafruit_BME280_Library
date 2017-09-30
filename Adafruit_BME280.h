@@ -168,6 +168,7 @@ class Adafruit_BME280 {
     
         // constructors
         Adafruit_BME280(void);
+	Adafruit_BME280(bool useAltBMEI2CAddr);
         Adafruit_BME280(int8_t cspin);
         Adafruit_BME280(int8_t cspin, int8_t mosipin, int8_t misopin, int8_t sckpin);
 		
