@@ -168,31 +168,31 @@ class Adafruit_BME280 {
     
         // constructors
         Adafruit_BME280(void);
-	Adafruit_BME280(bool useAltBMEI2CAddr);
+
         Adafruit_BME280(int8_t cspin);
         Adafruit_BME280(int8_t cspin, int8_t mosipin, int8_t misopin, int8_t sckpin);
 		
-		bool begin(void);
-		bool begin(TwoWire *theWire);
-		bool begin(uint8_t addr);
-        bool begin(uint8_t addr, TwoWire *theWire);
-		bool init();
+	bool	begin(void);
+	bool	begin(TwoWire *theWire);
+	bool	begin(uint8_t addr);
+        bool	begin(uint8_t addr, TwoWire *theWire);
+	bool	init();
 
-	void setSampling(sensor_mode mode              = MODE_NORMAL,
-			 sensor_sampling tempSampling  = SAMPLING_X16,
-			 sensor_sampling pressSampling = SAMPLING_X16,
-			 sensor_sampling humSampling   = SAMPLING_X16,
-			 sensor_filter filter          = FILTER_OFF,
-			 standby_duration duration     = STANDBY_MS_0_5
-			 );
+	void 	setSampling(	sensor_mode mode              = MODE_NORMAL,
+				sensor_sampling tempSampling  = SAMPLING_X16,
+				sensor_sampling pressSampling = SAMPLING_X16,
+				sensor_sampling humSampling   = SAMPLING_X16,
+				sensor_filter filter          = FILTER_OFF,
+				standby_duration duration     = STANDBY_MS_0_5
+			   );
                    
-        void takeForcedMeasurement();
-        float readTemperature(void);
-        float readPressure(void);
-        float readHumidity(void);
+        void	takeForcedMeasurement();
+        float	readTemperature(void);
+        float	readPressure(void);
+        float	readHumidity(void);
         
-        float readAltitude(float seaLevel);
-        float seaLevelForAltitude(float altitude, float pressure);
+        float	readAltitude(float seaLevel);
+        float	seaLevelForAltitude(float altitude, float pressure);
 
         
     private:
